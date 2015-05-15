@@ -1,6 +1,6 @@
 exports.config = {
-        user: 'mlarson',
-        password: '3913707',
+        user: '',
+        password: '',
         host: 'cwolf.cs.sonoma.edu',
-        database: 'mlarson'
+        database: ''
 };
