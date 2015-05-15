@@ -1,7 +1,7 @@
 {
-  "name": "lab18",
+  "name": "PROJECT 2",
   "version": "0.0.0",
-  "description": "CS355 Lab 18 Example",
+  "description": "CS355 PROJRC 02",
   "main": "app.js",
   "dependencies": {
     "body-parser": "~1.9.2",
