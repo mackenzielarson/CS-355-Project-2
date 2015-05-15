@@ -1,0 +1,38 @@
+<% var js_include = ['update_player.js']%>
+<% include header %>
+
+<h2>Edit a Player</h2>
+
+<form id="update_player_form" action="<%= action %>">
+    <table id="player_form">
+        <tr><td>First Name:</td>
+            <td><input type="text" id="fname" name="fname" value="<%= player[0].First_Name%>"></td>
+        </tr>
+        <tr><td>Last Name:</td>
+            <td><input type="text" id="lname" name="lname" value="<%= player[0].Last_Name%>"></td>
+        </tr>
+        <tr><td>Number:</td>
+            <td><input type="text" id="number" name="number" value="<%= player[0].Number%>"></td>
+        </tr>
+        <tr><td>Age:</td>
+            <td><input type="text" id="age" name="age" value="<%= player[0].Age%>"></td>
+        </tr>
+        <tr><td>Phone:</td>
+            <td><input type="text" id="phone" name="phone" value="<%= player[0].Phone_Num%>"></td>
+        </tr>
+        <tr><td>Email:</td>
+            <td><input type="text" id="email" name="email" value="<%= player[0].Email%>"></td>
+        </tr>
+        <tr><td>Address:</td>
+            <td><input type="text" id="address" name="address" value="<%= player[0].Address%>"> </td>
+
+    </table>
+    <input type="hidden" id="playerid" name="playerid" value="<%= player[0].PlayerID %>">
+    <input type="hidden" id="hsteamid" name="hsteamid" value="<%= hsteam[0].HSTeamID %>">
+    <input type="button" id="updatePlayerBtn" value="Update">
+</form>
+
+
+<div id="output" style="align-content: left; text-align: left; horiz-align: left; margin:0px; display: none;"></div>
+
+<% include footer %>

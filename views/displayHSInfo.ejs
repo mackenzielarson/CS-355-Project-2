@@ -1,0 +1,42 @@
+<% include header %>
+
+<h1><%= name[0].Name %> Information</h1>
+<% if(name.length > 0) { %>
+High School Name: <%= name[0].Name %> <br />
+Address: <%= name[0].Address %> <br />
+
+<BR />
+
+<a href="/hs/update?HSID=<%= name[0].HSID %>">Update this High School's Information</a>
+<%console.log(total);%>
+<h2><b>Total wins at <%= name[0].Name %>: <%= total[0].total%></b></h2>
+<br />
+<h1>Sports at <%= name[0].Name %></h1>
+<table border="1">
+    <tr><th>Sport Name</th>
+    <th>Sport Class</th>
+    <th>Sport Gender</th>
+        <th>Wins</th>
+        <th>Losses</th>
+    <th>More Info</th>
+    <th>Edit</th>
+    <th>Delete</th></tr>
+    <% for (var i=0; sport.length > i; i++) { %>
+    <tr>
+        <td><%= sport[i].SportName %></td>
+        <td><%= sport[i].SportClass %></td>
+        <td><%= sport[i].SportGender %></td>
+        <td><%= sport[i].Wins %></td>
+        <td><%= sport[i].Losses %></td>
+        <td><a href="/sport/teaminfo?SportID=<%= sport[i].SportID %>">Team Info</a></td>
+        <td><a href="/sport/edit?SportID=<%= sport[i].SportID %>">Edit</a></td>
+        <td><a href="/sport/delete?SportID=<%= sport[i].SportID %>&HSID=<%=name[0].HSID%>">Delete</a></td>
+    </tr>
+    <% } %>
+</table>
+<a href="/sport/create">Add a Sport</a>
+<% } else { %>
+No high school name matched this high school id <%= hsid %>.
+<% } %>
+
+<% include footer %>

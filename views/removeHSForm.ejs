@@ -1,0 +1,24 @@
+
+<% var js_include = ['remove_hs.js']; %>
+
+<% include header %>
+<h1>Select a high school to be deleted</h1>
+<% if(rs.length > 0) { console.log(action);%>
+<form method="get" action= "<%=action%>" >
+    <label for="hs_id">HS</label>
+    <select id="hs_id" name="hs_id">
+        <% for (var i=0; rs.length > i; i++) { %>
+        <option value="<%= rs[i].HSID %>">
+            <%= rs[i].Name %>
+        </option>
+        <% } %>
+    </select>
+
+    <input type="submit" value="Delete"/>
+    <div id="output" style="margin:10px;display:none"></div>
+</form>
+<% } else { %>
+The table does not contain any records.
+<% } %>
+
+<% include footer %>

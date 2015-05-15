@@ -1,0 +1,29 @@
+<% var js_include = ['create_coach.js']; %>
+<% include header %>
+<h1>Create a coach!</h1>
+<form id="create_coach_form" action="<%= action %>">
+    <table id="login">
+
+
+        <tr><td>Name:</td>
+            <td><input type="text" id="name" name="name" /></td>
+        </tr>
+        <tr><td>Phone:</td>
+            <td><input type="text" id="phone" name="phone" /></td>
+        </tr>
+        <tr><td>Email:</td>
+            <td><input type="text" id="email" name="email" /></td>
+        </tr>
+        <tr><td>Address:</td>
+            <td><input type="text" id="address" name="address" /></td>
+    </table>
+
+    <input type="hidden" id="hsteamid" name="hsteamid" value="<%= hsteamid %>">
+    <input type="hidden" id="SportID" name="SportID" value="<%=sportid%>">
+
+    <input type="button" id="createCoachBtn" value="Create" />
+</form>
+
+<div id="output" style="margin:10px;display:none"></div>
+
+<% include footer %>

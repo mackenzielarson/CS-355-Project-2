@@ -1,6 +1,6 @@
 exports.config = {
-        user: 'your_mysql_username',
-        password: 'your_mysql_password',
-        host: 'the_mysql_server',
-        database: 'your_mysql_database'
+        user: 'mlarson',
+        password: '3913707',
+        host: 'cwolf.cs.sonoma.edu',
+        database: 'mlarson'
 };

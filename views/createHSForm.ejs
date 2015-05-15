@@ -1,0 +1,21 @@
+<% // create a list of javascript files to have the header load %>
+<% var js_include = ['create_hs.js']; %>
+<% include header %>
+
+<!-- Note that this is a post -->
+<h1>Create a new high school</h1>
+<form id="create_user_form" action="<%= action %>">
+    <table id="login">
+        <tr><td>High School Name:</td>
+            <td><input type="text" id="name" name="name" /></td>
+        </tr>
+        <tr><td>Address:</td>
+            <td><input type="text" id="address" name="address" /></td>
+    </table>
+    <!-- not that we use a button here and not submit -->
+    <input type="button" id="createHSBtn" value="Create" />
+</form>
+
+<div id="output" style="margin:10px;display:none"></div>
+
+<% include footer %>

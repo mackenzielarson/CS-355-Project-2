@@ -1,7 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Simple NodeJS MVC App</title>
+    <title>HS TEAMS APP</title>
+    <link href="/style.css" type="text/css" rel="stylesheet" >
     <script type="text/javascript" src="/jquery-1.11.2.min.js"></script>
 
     <% if(typeof js_include !== 'undefined') {
@@ -16,4 +17,17 @@
         <% /* block
               comments
             */ %>
-        <h1><%= locals.settings.subtitle %>:Simple NodeJS Application</h1>
+        <div id="header">
+            <h1><%= locals.settings.subtitle %>: High School Sports</h1>
+        </div>
+
+        <div id="nav">
+            <a href="/" >Home</a> <br />
+            <a href="/about" >About</a> <br />
+            <a href="/hs/create">Create a High School</a> <br />
+            <a href="/hs/select">Select a High School</a> <br />
+            <a href="/hs/delete">Remove a High School</a> <br />
+            <a href="/sport/create">Create a Sport</a> <br />
+
+        </div>
+        <div id="content">

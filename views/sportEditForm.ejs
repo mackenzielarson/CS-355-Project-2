@@ -1,0 +1,30 @@
+<% var js_include = ['update_sport.js']%>
+<% include header %>
+
+<h2>Edit a Sport</h2>
+
+<form id="update_sport_form" action="<%= action %>">
+    <table id="sport_form">
+        <tr><td>Sport Name:</td>
+            <td><input type="text" id="sname" name="sname" value="<%= rs[0].SportName%>"> </td>
+        </tr>
+        <tr><td>Sport Class:</td>
+            <td><input type="text" id="sclass" name="sclass" value="<%= rs[0].SportClass%>"> </td>
+        </tr>
+        <tr><td>Sport Gender:</td>
+            <td><input type="text" id="sgender" name="sgender" value="<%= rs[0].SportGender%>"></td>
+        </tr>
+        <tr><td>Wins:</td>
+            <td><input type="text" id="wins" name="wins" value="<%= rs[0].Wins%>"></td>
+        </tr>
+        <tr><td>Losses:</td>
+            <td><input type="text" id="losses" name="losses" value="<%= rs[0].Losses%>"></td>
+    </table>
+    <input type="hidden" id="sportid" name="sportid" value="<%= rs[0].SportID %>">
+    <input type="button" id="updateSportBtn" value="Update">
+</form>
+
+
+<div id="output" style="align-content: left; text-align: left; horiz-align: left; margin:0px; display: none;"></div>
+
+<% include footer %>

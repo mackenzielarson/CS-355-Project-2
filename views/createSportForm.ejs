@@ -1,0 +1,37 @@
+<% var js_include = ['create_sport.js']; %>
+<% include header %>
+<h1>Create a sport!</h1>
+<form id="create_sport_form" action="<%= action %>">
+    <table id="login">
+
+        <label for="hsname">HS: </label>
+        <select id="hsname" name="hsname">
+            <% for (var i=0; rs.length > i; i++) { %>
+            <option value="<%= rs[i].Name %>">
+                <%= rs[i].Name %>
+            </option>
+            <% } %>
+        </select>
+
+        <tr><td>Sport Name:</td>
+            <td><input type="text" id="sname" name="sname" /></td>
+        </tr>
+        <tr><td>Sport Class:</td>
+            <td><input type="text" id="sclass" name="sclass" /></td>
+        </tr>
+        <tr><td>Sport Gender:</td>
+            <td><input type="text" id="sgender" name="sgender" /></td>
+        </tr>
+        <tr><td>Wins:</td>
+            <td><input type="text" id="wins" name="wins" /></td>
+        </tr>
+        <tr><td>Losses:</td>
+            <td><input type="text" id="losses" name="losses" /></td>
+    </table>
+
+    <input type="button" id="createSportBtn" value="Create" />
+</form>
+
+<div id="output" style="margin:10px;display:none"></div>
+
+<% include footer %>

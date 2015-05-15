@@ -1,0 +1,20 @@
+<% include header %>
+
+<h1>Select a high school from the drop down menu</h1>
+<% if(rs.length > 0) { %>
+<form method="get" action="/hs/view">
+    <label for="hs_id">HS</label>
+    <select id="hs_id" name="hs_id">
+        <% for (var i=0; rs.length > i; i++) { %>
+        <option value="<%= rs[i].HSID %>">
+            <%= rs[i].Name %>
+        </option>
+        <% } %>
+    </select>
+    <input type="submit">
+</form>
+<% } else { %>
+The table does not contain any records.
+<% } %>
+
+<% include footer %>

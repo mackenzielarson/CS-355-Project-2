@@ -1,26 +1,33 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-    <title>Simple NodeJS MVC App</title>
-</head>
-    <body>
-        <h1>Lab 18: Simple NodeJS MVC App</h1>
 
-        <p>This is a list of examples.  See the app.js file to see what happens when these links are clicked.</p>
-        <ol>
-            <li>Example 1
-                <ol><li>Going to the domain:your_port/ sends a request to app.js</li>
-                    <li>which routes the request to the router.get('/') function in controller/index.js</li>
-                    <li>which returns the <strong>static</strong> index.html file to the user</li>
-                </ol>
-            </li>
-            <li><a href="/hello">Example 2</a> - /hello routes to index.js and sends back a <strong>plain text</strong> message</li>
-            <li><a href="/template_example">Example 3</a> - /template_example routes to index.js and sends back this home page, but using a template.</li>
+<div id = "head">
+    <head>
+        <title>Project02</title>
+    </head>
+</div>
 
-            <li><a href="/student/create">Example 4</a> - /student/create, routes requests to router.get('student/create') in controller/student.  An ajax form for creating a student is returned.</li>
-            <li><a href="/student/all">Example 5</a> - /student/all displays all users in a table</li>
-            <li><a href="/student/dropdown">Example 6</a> - /student/dropdown displays all student in a drop down menu</li>
-        </ol>
-    </body>
+<body>
+<div id = "header">
+    <h1>Project 02 WELCOME :D</h1>
+</div>
+
+
+<h1>This page: create hs/ delete hs/ select hs / create a sport</h1>
+<li><a href="/hs/create">Create a High School</a></li>
+<li><a href="/hs/select">Select a High School</a></li>
+<li><a href="/hs/delete">Remove a High School</a></li>
+
+<li><a href="/sport/create">Create a Sport</a></li>
+
+</ol>
+
+<footer>
+    Copyright @ ThisIsMine
+</footer>
+
+
+</body>
 
 </html>
+

@@ -1,0 +1,15 @@
+<% include header %>
+<h2>Player Info</h2>
+<% if(player.length > 0) { %>
+HS Name: <%= player[0].HSName %> <br />
+First Name: <%= player[0].First_Name %> <br />
+Last Name: <%= player[0].Last_Name %> <br />
+Number: <%= player[0].Number %> <br />
+Age: <%= player[0].Age %> <br />
+Phone: <%= player[0].Phone_Num %> <br />
+Email: <%= player[0].Email %> <br />
+Address: <%= player[0].Address %> <br />
+<% } else { %>
+No hs matched this player id <%= playerid %>.
+<% } %>
+<% include footer %>

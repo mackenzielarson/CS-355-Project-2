@@ -1,0 +1,12 @@
+<% include header %>
+<h2>Coach Info</h2>
+<% if(coach.length > 0) { %>
+Name: <%= coach[0].Name %> <br />
+Phone: <%= coach[0].Phone_Num %> <br />
+Email: <%= coach[0].Email %> <br />
+Address: <%= coach[0].Address %> <br />
+
+<% } else { %>
+No hs matched this player id <%= playerid %>.
+<% } %>
+<% include footer %>

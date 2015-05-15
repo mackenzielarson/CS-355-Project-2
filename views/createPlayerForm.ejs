@@ -1,0 +1,45 @@
+<% var js_include = ['create_player.js']; %>
+<% include header %>
+<h1>Create a player!</h1>
+<form id="create_player_form" action="<%= action %>">
+    <table id="login">
+
+        <label for="hsname">HS: </label>
+        <select id="hsname" name="hsname">
+            <% for (var i=0; hs.length > i; i++) { %>
+            <option value="<%= hs[i].Name %>">
+                <%= hs[i].Name %>
+            </option>
+            <% } %>
+        </select>
+
+        <tr><td>First Name:</td>
+            <td><input type="text" id="fname" name="fname" /></td>
+        </tr>
+        <tr><td>Last Name:</td>
+            <td><input type="text" id="lname" name="lname" /></td>
+        </tr>
+        <tr><td>Number:</td>
+            <td><input type="text" id="number" name="number" /></td>
+        </tr>
+        <tr><td>Age:</td>
+            <td><input type="text" id="age" name="age" /></td>
+        </tr>
+        <tr><td>Phone:</td>
+            <td><input type="text" id="phone" name="phone" /></td>
+        </tr>
+        <tr><td>Email:</td>
+            <td><input type="text" id="email" name="email" /></td>
+        </tr>
+        <tr><td>Address:</td>
+            <td><input type="text" id="address" name="address" /></td>
+    </table>
+    <input type="hidden" id="hsteamid" name="hsteamid" value="<%= hsteamid %>">
+    <input type="hidden" id="SportID" name="SportID" value="<%=sportid%>">
+
+    <input type="button" id="createPlayerBtn" value="Create" />
+</form>
+
+<div id="output" style="margin:10px;display:none"></div>
+
+<% include footer %>

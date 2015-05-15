@@ -1,0 +1,7 @@
+<h2>High School Inserted</h2>
+<% if(rs.length > 0) { %>
+Name: <%= rs[0].Name %> <br />
+Address: <%= rs[0].Address %> <br />
+<% } else { %>
+No hs matched this hs id <%= hsid %>.
+<% } %>

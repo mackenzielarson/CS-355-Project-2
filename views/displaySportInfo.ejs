@@ -1,0 +1,62 @@
+<% include header %>
+
+<h1><%= sport[0].HSName %> <%= sport[0].SportClass %> <%= sport[0].SportGender %>'s <%= sport[0].SportName %></h1>
+<h2>Wins: <%= sport[0].Wins %> Losses: <%= sport[0].Losses %></h2>
+
+
+<% if(sport.length > 0) { %>
+
+
+<h1>Players at <%= sport[0].HSName %></h1>
+<p>*NOTE: If there aren't any players or coaches in the tables yet, the delete/view more info/edit buttons will not work. Please add a player or coach to access these functions!</p>
+
+<a href="/player/create?HSTeamID=<%= player[0].HSTeamID %>&SportID=<%= player[0].SportID%>">Add a Player</a>
+
+
+<table border="1">
+    <tr><th>First Name</th>
+        <th>Last Name</th>
+        <th>Number</th>
+        <th>More Info</th>
+        <th>Edit</th>
+        <th>Delete</th></tr>
+    <% for (var i=0; player.length > i; i++) { %>
+    <tr>
+        <td><%= player[i].First_Name %></td>
+        <td><%= player[i].Last_Name %></td>
+        <td><%= player[i].Number %></td>
+        <td><a href="/player/moreinfo?HSTeamID=<%= player[i].HSTeamID %> &PlayerID=<%= player[i].PlayerID %>">Player Info</a></td>
+        <td><a href="/player/edit?HSTeamID=<%= player[i].HSTeamID %> &PlayerID=<%= player[i].PlayerID %>">Edit</a></td>
+        <td><a href="/player/delete?HSTeamID=<%= player[i].HSTeamID %> &PlayerID=<%= player[i].PlayerID %>&SportID=<%=sport[0].SportID%>">Delete</a></td>
+    </tr>
+    <% } %>
+</table>
+
+
+<h1>Coaches at <%= sport[0].HSName %></h1>
+
+<a href="/coach/create?HSTeamID=<%= coach[0].HSTeamID%>&SportID=<%= coach[0].SportID%>">Add a Coach</a>
+
+<table border="1">
+    <tr><th>Name</th>
+        <th>Phone</th>
+        <th>More Info</th>
+        <th>Edit</th>
+        <th>Delete</th></tr>
+    <% for (var i=0; coach.length > i; i++) { %>
+    <tr>
+        <td><%= coach[i].Name %></td>
+        <td><%= coach[i].Phone_Num %></td>
+        <td><a href="/coach//moreinfo?HSTeamID=<%= coach[i].HSTeamID %>&CoachID=<%= coach[i].CoachID %>">Coach Info</a></td>
+        <td><a href="/coach/edit?HSTeamID=<%= coach[i].HSTeamID %>&CoachID=<%= coach[i].CoachID %>">Edit</a></td>
+        <td><a href="/coach/delete?HSTeamID=<%= coach[i].HSTeamID %>&CoachID=<%= coach[i].CoachID %>&SportID=<%=sport[0].SportID%>">Delete</a>
+    </tr>
+    <% } %>
+</table>
+
+<% } else { %>
+No hs matched this sport id <%= sportid %>.
+<% } %>
+
+
+<% include footer %>

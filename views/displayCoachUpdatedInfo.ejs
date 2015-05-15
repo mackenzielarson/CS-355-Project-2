@@ -1,0 +1,9 @@
+<h2>Coach Updated!</h2>
+<% if(rs.length > 0) { %>
+Name: <%= rs[0].Name %> <br />
+Phone: <%= rs[0].Phone_Num %> <br />
+Email: <%= rs[0].Email %> <br />
+Address: <%= rs[0].Address %> <br />
+<% } else { %>
+No hs matched this hs id <%= hsid %>.
+<% } %>

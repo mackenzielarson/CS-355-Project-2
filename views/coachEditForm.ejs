@@ -1,0 +1,29 @@
+<% var js_include = ['update_coach.js']%>
+<% include header %>
+
+<h2>Edit a Coach</h2>
+
+<form id="update_coach_form" action="<%= action %>">
+    <table id="coach_form">
+        <tr><td>Name:</td>
+            <td><input type="text" id="name" name="name" value="<%= coach[0].Name%>"></td>
+        </tr>
+        <tr><td>Phone:</td>
+            <td><input type="text" id="phone" name="phone" value="<%= coach[0].Phone_Num%>"></td>
+        </tr>
+        <tr><td>Email:</td>
+            <td><input type="text" id="email" name="email" value="<%= coach[0].Email%>"></td>
+        </tr>
+        <tr><td>Address:</td>
+            <td><input type="text" id="address" name="address" value="<%= coach[0].Address%>"> </td>
+
+    </table>
+    <input type="hidden" id="coachid" name="coachid" value="<%= coach[0].CoachID %>">
+    <input type="hidden" id="hsteamid" name="hsteamid" value="<%= hsteam[0].HSTeamID %>">
+    <input type="button" id="updateCoachBtn" value="Update">
+</form>
+
+
+<div id="output" style="align-content: left; text-align: left; horiz-align: left; margin:0px; display: none;"></div>
+
+<% include footer %>

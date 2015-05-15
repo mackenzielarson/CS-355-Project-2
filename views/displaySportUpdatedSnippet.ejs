@@ -1,0 +1,11 @@
+<h2>Sport Updated!</h2>
+<% if(rs.length > 0) { %>
+HS Name: <%= rs[0].HSName %> <br />
+Sport Name: <%= rs[0].SportName %> <br />
+Sport Class: <%= rs[0].SportClass %> <br />
+Sport Gender: <%= rs[0].SportGender %> <br />
+Wins: <%= rs[0].Wins %> <br />
+Losses: <%= rs[0].Losses %> <br />
+<% } else { %>
+No hs matched this hs id <%= hsid %>.
+<% } %>

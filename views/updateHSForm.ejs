@@ -1,0 +1,20 @@
+<% var js_include = ['update_hs.js']; %>
+<% include header %>
+
+<!-- Note that this is a post -->
+<form id="update_hs_form" action="<%= action %>">
+    <table id="login">
+        <tr><td>High School Name:</td>
+            <td><input type="text" id="name" name="name" value="<%= rs[0].Name %>"/></td>
+        </tr>
+        <tr><td>Address:</td>
+            <td><input type="text" id="address" name="address" value="<%= rs[0].Address %>" /></td>
+    </table>
+    <!-- not that we use a button here and not submit -->
+    <input type="hidden" id="hsid" name="hsid" value="<%= rs[0].HSID %>" />
+    <input type="button" id="updateHSBtn" value="Update" />
+</form>
+
+<div id="output" style="margin:10px;display:none"></div>
+
+<% include footer %>

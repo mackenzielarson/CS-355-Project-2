@@ -1,0 +1,13 @@
+<h2>Player Updated!</h2>
+<% if(rs.length > 0) { %>
+HS Name: <%= rs[0].HSName %> <br />
+First Name: <%= rs[0].First_Name %> <br />
+Last Name: <%= rs[0].Last_Name %> <br />
+Number: <%= rs[0].Number %> <br />
+Age: <%= rs[0].Age %> <br />
+Phone: <%= rs[0].Phone_Num %> <br />
+Email: <%= rs[0].Email %> <br />
+Address: <%= rs[0].Address %> <br />
+<% } else { %>
+No hs matched this hs id <%= hsid %>.
+<% } %>
